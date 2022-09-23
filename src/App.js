@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import User from './components/User/User';
 
 function App() {
+  const [familiar, setFamiliar] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+
+      {/* dynamically show true/false */}
+      <h2>Is Familiar : {familiar.toString()}</h2>
+      
+      {/* ja thakbe tar biporid ta dekhabe er jnne (!familiar) */}
+      <button onClick={()=>setFamiliar(!familiar)}>Toggle</button>
+
+      {/* User component er vitore condition ta pathano hoyeche */}
+      <User familiar = {familiar}></User>
     </div>
   );
 }
