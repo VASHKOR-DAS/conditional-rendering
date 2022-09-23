@@ -21,7 +21,7 @@ const User = (props) => {
 
     // jodi 2ta condition 1sathei fullfil korte hobe, tobe
     // logical &&
-    /* const connection = familiar && <p>Let's join my facebook</p> */
+    /* const connection = familiar && <p>Let's join my facebook.</p> */
 
     return (
         <>
@@ -49,7 +49,7 @@ const User = (props) => {
                 {/* <p>I don't add stranger.</p> */}
 
                 {
-                    familiar && <p>Let's join my facebook</p>
+                    familiar && <p>Let's join my facebook.</p>
                 }
 
             </div>
